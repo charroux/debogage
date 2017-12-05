@@ -1,7 +1,17 @@
 debogage
 ========
 
-Utilisation de techniques de debogage (tests unitaires, couverture de code et vérification de règles de codage)
+Utilisation de techniques de debogage (tests unitaires, couverture de code et vérification de règles de codage).
+
+======== Tests unitaires =========
+
+Le but de cette partie est d'écrire un programme de test pour la classe https://github.com/charroux/debogage/blob/master/src/main/java/com/univ/Testing/Compte.java
+
+Toutes les méthodes de cette classe doivent être testées.
+
+Une ébauche du programme de test a été écrit dans la classes https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
+
+Ce programmme utilise JUint.
 
 Ce projet utilise Gradle qui doit être installé sur votre machine ainsi que Java.
 
