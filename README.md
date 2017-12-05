@@ -47,47 +47,26 @@ ou
 
 Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
 
+======== Codage =========
 
-Ce projet utilise Gradle qui doit être installé sur votre machine ainsi que Java.
-viz
-Construire le projet avec la commande : gradle build
+Terminer l'écriture du programme https://github.com/charroux/debogage/blob/master/src/main/java/com/univ/Testing/Compte.java
 
-Consulter le rapport de test dans le sous-dossier : build\reports\test 
+Remarque : si vous ne vous sentez pas  à l'aise avec les exceptions vous pouvez les effacer.
 
-Faire une vérification de la couverture de test en utilisant le plugin Jacoco :
+======== Ecriture du programme de test =========
 
-- ajouter au fichier build.gradle :
+Compléter le programme de test https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
+afin de tester la classe de la classe de la question précédente.
 
-apply plugin: 'jacoco'
+Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs.
 
-test {
-    systemProperties 'property': 'value'
-}
+======== Couverture de code avec Jacoco =========
 
-jacocoTestReport {
-    reports {
-        xml.enabled false
-        csv.enabled false
-        html.destination "${buildDir}/jacocoHtml"
-    }
-}
+Le projet est configuré pour effectuer des tests de couverture de code. 
 
-- lancer Jacoco avec la commande :  gradle test jacocoTestReport
+Pour lancer les tests de couverture utilisez la commande : ./gradlew test jacocoTestReport
 
-- consulter le rapport de test dans le sous dossier : build\jacocoHtml
+Le rapport de test HTML est dans le dossier build/jacocoHtml.
 
-Analyse statique de code soure avec findBugs :
-
-- ajouter au fichier build.gradle :
-
-apply plugin: 'findbugs'
-
-findbugs {
-	effort = "max"
-	reportLevel = "high"
-}
-
-- lancer findBugs : gradle findbugsMain
-
-- analyser le rapport qui se trouve dans le sous-dossier build\reports\findBugs
+Vérifier que votre code est couvert à 100%. Si ce n'est pas la cas ajoutez des tests à votre programme de test.
 
