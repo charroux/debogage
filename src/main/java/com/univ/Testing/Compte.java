@@ -5,7 +5,7 @@ public class Compte {
 	private float solde;
 	
 	/**
-	 * Credite le compte du montant donné en argument.
+	 * Credite le compte du montant transmis en argument.
 	 * @param credit
 	 * @throws Exception si credit <= 0
 	 */
@@ -17,10 +17,10 @@ public class Compte {
 	}
 
 	/**
-	 * Débite le compte de la valeur donnée en argument
+	 * Debite le compte de la valeur transmise en argument
 	 * @param debit
-	 * @return le montant demandé si le solde du compte est supérieur au montant demandé,
-	 * retourne la valeur du solde si le solde est inférieur au montant demandé. 
+	 * @return le montant demande si le solde du compte est superieur au montant demande,
+	 * retourne la valeur du solde si le solde est inferieur au montant demande. 
 	 * @throws Exception si debit < 20 ou si debit > 1000 euros.
 	 */
 	float debiter(float debit) throws Exception{
