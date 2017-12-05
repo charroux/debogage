@@ -29,11 +29,13 @@ gradlew build
 
 sous Windows.
 
-le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
+Le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
+
+Cette commande commnence par compiler le code Java, lance automatiquement le programme de test. 
 
 ======== Consultation du rapport de test =========
 
-Le build du projet s'est terminé par le lancement automatique du programme de test JUnit. Le rapport HTML de test est accessible dans le dossier build/reports/tests/test. Il vous indique que les deux tests du programme de test ont réussi. Ainsi il vous suffira de refaire la commande gradle build pour relancer à tout moment les tests.
+Le build du projet s'est terminé par le lancement automatique du programme de test JUnit. Le rapport HTML de test est accessible dans le dossier build/reports/tests/test. Il vous indique que les deux tests du programme de test ont réussi. Ainsi il vous suffira de refaire la commande gradle build pour recompiler votre projet et relancer à tout moment les tests.
 
 ======== Edition du projet sous Eclipse (optionnel) =========
 
