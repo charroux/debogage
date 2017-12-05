@@ -11,7 +11,7 @@ Toutes les méthodes de cette classe doivent être testées.
 
 Une ébauche du programme de test a été écrit dans la classes https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
 
-Ce programmme utilise JUint.
+Ce programmme utilise JUnit (voir le cours).
 
 ======== Téléchargement du projet =========
 
@@ -21,11 +21,13 @@ Utilisez le bouton dowload accessible à partir de la page principale de ce proj
 
 Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies telles que JUnit. Pour builder le projet il faut utiliser la commande 
 
-./gradlew build			sous Linux
+./gradlew build			
 
-ou
+sous Linux ou
 
-/gradlew build			sous Windows
+gradlew build			
+
+sous Windows.
 
 le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
 
@@ -35,15 +37,17 @@ Le build du projet s'est terminé par le lancement automatique du programme de t
 
 ======== Edition du projet sous Eclipse (optionnel) =========
 
-Cette partie utilise Eclipse mais vous pouvez aussi bien utiliser n'importe que éditeur pour éditer le programme à tester et le programme de test.
+Cette partie utilise Eclipse mais vous pouvez aussi bien utiliser n'importe quel éditeur pour éditer le programme à tester et le programme de test.
 
 Avant d'éditer le projet sous Eclipse, il faut convertir le projet gradle en un projet eclipse via la commande
 
-./gradlew eclipse		sous Linux
+./gradlew eclipse		
 
-ou
+sous Linux ou
 
-/gradlew eclipse		sous Windows
+gradlew eclipse		
+
+sous Windows.
 
 Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
 
