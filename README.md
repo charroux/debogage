@@ -13,8 +13,43 @@ Une ébauche du programme de test a été écrit dans la classes https://github.
 
 Ce programmme utilise JUint.
 
-Ce projet utilise Gradle qui doit être installé sur votre machine ainsi que Java.
+======== Téléchargement du projet =========
 
+Utilisez le bouton dowload accessible à partir de la page principale de ce projet pour télécharger ce projet, ou utilisez les commandes git.
+
+======== Build du projet =========
+
+Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies telles que JUnit. Pour builder le projet il faut utiliser la commande 
+
+./gradlew build			sous Linux
+
+ou
+
+/gradlew build			sous Windows
+
+le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
+
+======== Consultation du rapport de test =========
+
+Le build du projet s'est terminé par le lancement automatique du programme de test JUnit. Le rapport HTML de test est accessible dans le dossier build/reports/tests/test. Il vous indique que les deux tests du programme de test ont réussi. Ainsi il vous suffira de refaire la commande gradle build pour relancer à tout moment les tests.
+
+======== Edition du projet sous Eclipse (optionnel) =========
+
+Cette partie utilise Eclipse mais vous pouvez aussi bien utiliser n'importe que éditeur pour éditer le programme à tester et le programme de test.
+
+Avant d'éditer le projet sous Eclipse, il faut convertir le projet gradle en un projet eclipse via la commande
+
+./gradlew eclipse		sous Linux
+
+ou
+
+/gradlew eclipse		sous Windows
+
+Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
+
+
+Ce projet utilise Gradle qui doit être installé sur votre machine ainsi que Java.
+viz
 Construire le projet avec la commande : gradle build
 
 Consulter le rapport de test dans le sous-dossier : build\reports\test 
