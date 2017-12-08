@@ -20,7 +20,7 @@ public class TestingApplicationTests {
 		float solde = compte.getSolde();
 		Assert.assertTrue(solde == 0);
 	}
-	
+
 	@Test
 	public void testCrediter() {
 		try {
