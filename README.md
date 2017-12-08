@@ -55,6 +55,8 @@ sous Windows.
 
 Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
 
+Attention cependant, Eclipse va sous servir uniquement à éditer les programmes, mais pas à exécuter les tests.
+
 ======== Codage =========
 
 Terminer l'écriture du programme https://github.com/charroux/debogage/blob/master/src/main/java/com/univ/Testing/Compte.java
@@ -66,7 +68,7 @@ Remarque : si vous ne vous sentez pas  à l'aise avec les exceptions vous pouvez
 Compléter le programme de test https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
 afin de tester la classe de la classe de la question précédente.
 
-Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs.
+Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs. Attention cependant ! si vous avez des erreurs de compilation, le build échouera. Un message d'erreur s'affichera. Vous devrez alors corriger le problème de compilation avec que le build réussisse.
 
 ======== Couverture de code avec Jacoco =========
 
