@@ -23,11 +23,13 @@ Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies tell
 
 ./gradlew build			
 
-sous Linux ou
+sous Linux (attention ! parfois le fichier gradlew n'est pas exécutable. Dans ce cas, il faut exécuter la commande : chmod 777 gradlew)
+
+ou
 
 gradlew build			
 
-sous Windows.
+sous Windows. 
 
 Le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
 
