@@ -25,7 +25,10 @@ public class Compte {
 	 * @throws Exception si debit < 20 ou si debit > 1000 euros.
 	 */
 	public float debiter(float debit) throws Exception{
-		throw new Exception();
+		if(debit <= 0) {
+			throw new Exception();
+		}
+		return 0;
 	}
 	
 	/**

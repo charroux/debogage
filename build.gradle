@@ -43,6 +43,7 @@ jacocoTestReport {
 }
 
 findbugs {
+	toolVersion = "3.0.1"
 	effort = "min"
 	reportLevel = "high"
 }
