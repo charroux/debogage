@@ -111,7 +111,11 @@ This field is never read.  Consider removing it from the class.
 On peut aussi choisir le niveau de seuil de findbugs. Pour fixer le seuil à la valeur la plus stricte il faut changer la configuration de findbugs dans le fichier build.gradle comme suit :
 
 findbugs {
+
 	toolVersion = "3.0.1"
+
 	effort = "max"
+	
 	reportLevel = "low"
+	
 }
