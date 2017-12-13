@@ -78,7 +78,7 @@ Pour lancer les tests de couverture utilisez la commande : ./gradlew test jacoco
 
 Le rapport de test HTML est dans le dossier build/jacocoHtml.
 
-Vérifier que votre code est couvert à 100%. Si ce n'est pas la cas ajoutez des tests à votre programme de test.
+Jacoco vérifie la couverture de code C0 (instructions) et C1 (branches). Vérifier que votre code est couvert à 100%. Si ce n'est pas la cas ajoutez des tests à votre programme de test.
 
 ======== Analyse statique du code source Java avec findBugs ============
 
