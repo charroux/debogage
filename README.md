@@ -19,7 +19,9 @@ Utilisez le bouton dowload accessible à partir de la page principale de ce proj
 
 ======== Build du projet =========
 
-Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies telles que JUnit. Pour builder le projet il faut utiliser la commande 
+Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies telles que JUnit. Gradle va automatiquement télécharger les librairies utiles au projet. Attention cependant si l'accès à internet se fait via un proxy comme c'est le cas à l'IUT. Dans ce cas il faut indiquer à Gradle la configuration du proxy dans un fichier gradle.properties. D'où la présence de ce fichier dans le projet. Si vous accédez directement à Internet sans passer par un proxy (comme c'est le cas par exemple si vous utilisez le WiFi d'un téléphone portable) il faut supprimer le fichier gradle.properties du projet. 
+
+Pour builder le projet il faut utiliser la commande 
 
 ./gradlew build			
 
