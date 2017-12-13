@@ -23,11 +23,13 @@ Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies tell
 
 ./gradlew build			
 
-sous Linux ou
+sous Linux (attention ! parfois le fichier gradlew n'est pas exécutable. Dans ce cas, il faut exécuter la commande : chmod 777 gradlew)
+
+ou
 
 gradlew build			
 
-sous Windows.
+sous Windows. 
 
 Le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
 
@@ -53,6 +55,8 @@ sous Windows.
 
 Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
 
+Attention cependant, Eclipse va sous servir uniquement à éditer les programmes, mais pas à exécuter les tests.
+
 ======== Codage =========
 
 Terminer l'écriture du programme https://github.com/charroux/debogage/blob/master/src/main/java/com/univ/Testing/Compte.java
@@ -64,7 +68,7 @@ Remarque : si vous ne vous sentez pas  à l'aise avec les exceptions vous pouvez
 Compléter le programme de test https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
 afin de tester la classe de la classe de la question précédente.
 
-Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs.
+Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs. Attention cependant ! si vous avez des erreurs de compilation, le build échouera. Un message d'erreur s'affichera. Vous devrez alors corriger le problème de compilation avec que le build réussisse.
 
 ======== Couverture de code avec Jacoco =========
 
@@ -76,3 +80,42 @@ Le rapport de test HTML est dans le dossier build/jacocoHtml.
 
 Vérifier que votre code est couvert à 100%. Si ce n'est pas la cas ajoutez des tests à votre programme de test.
 
+======== Analyse statique du code source Java avec findBugs ============
+
+findBugs est un outils qui permet de détecter des erreurs de codage via une analyse statique des programmes (voir le cours).
+
+Le lancement de findBugs se fait via la commande :
+
+./gradlew findbugsMain
+
+sous Linux, ou 
+
+gradlew findbugsMain
+
+sous Windows.
+
+La rapport de test (en XML) est généré dans le dossier build/reports/findbugs/main.xml.
+
+L'analyse du rapport est un peu fastidieuse. Il faut repérer les balises BugInstance. Voilà un exemple :
+
+<BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+  
+Pour savoir à quel bug cela correspond il faut chercher sur le site de findbugs : http://findbugs.sourceforge.net/bugDescriptions.html
+
+En l'occurence le site indique :
+
+UrF: Unread field (URF_UNREAD_FIELD)
+
+This field is never read.  Consider removing it from the class.
+
+On peut aussi choisir le niveau de seuil de findbugs. Pour fixer le seuil à la valeur la plus stricte il faut changer la configuration de findbugs dans le fichier build.gradle comme suit :
+
+findbugs {
+
+	toolVersion = "3.0.1"
+
+	effort = "max"
+	
+	reportLevel = "low"
+	
+}
