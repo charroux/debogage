@@ -41,9 +41,11 @@ Cette commande commnence par compiler le code Java, lance automatiquement le pro
 
 Le build du projet s'est terminé par le lancement automatique du programme de test JUnit. Le rapport HTML de test est accessible dans le dossier build/reports/tests/test. Il vous indique que les deux tests du programme de test ont réussi. Ainsi il vous suffira de refaire la commande gradle build pour recompiler votre projet et relancer à tout moment les tests.
 
-======== Edition du projet sous Eclipse (optionnel) =========
+======== Edition du projet =========
 
-Cette partie utilise Eclipse mais vous pouvez aussi bien utiliser n'importe quel éditeur pour éditer le programme à tester et le programme de test.
+Vous pouvez utiliser n'importe quel éditeur de texte pour éditer les programmes (les erreurs de compilation apparaissent quand vous faites un build du projet.
+
+======== Edition du projet sous Eclipse (optionnel et nécessite parfois un peu de configuration) =========
 
 Avant d'éditer le projet sous Eclipse, il faut convertir le projet gradle en un projet eclipse via la commande
 
