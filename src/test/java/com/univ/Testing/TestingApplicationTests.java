@@ -1,12 +1,14 @@
 package com.univ.Testing;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+/*import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.Assert;
+import org.junit.Assert;*/
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestingApplicationTests {
 
@@ -18,7 +20,7 @@ public class TestingApplicationTests {
 	public void testCreationCompte() {
 		Compte compte = new Compte();
 		float solde = compte.getSolde();
-		Assert.assertTrue(solde == 0);
+		Assertions.assertTrue(solde == 0);
 	}
 
 	@Test
@@ -27,16 +29,18 @@ public class TestingApplicationTests {
 			Compte compte = new Compte();
 			compte.crediter(0);
 			float solde = compte.getSolde();
-			Assert.assertTrue(solde == 0);
+			Assertions.assertTrue(solde == 0);
 		} catch(Exception e) {				// si on a une exception... 
-			Assert.fail("Erreur credit");	// ... c'est une erreur
+			Assertions.fail("Erreur credit");	// ... c'est une erreur
 		}		
 	}
 	
-	@Test(expected = Exception.class)			// exception attendue...	
-	public void testDebiter() throws Exception {
-		Compte compte = new Compte();
-		float solde = compte.debiter(-10);		// ... on ne peut pas debiter -10
+	@Test			// exception attendue...	
+	public void testDebiter() {
+		Assertions.assertThrows(Exception.class, () -> {
+			Compte compte = new Compte();
+			float solde = compte.debiter(-10);		// ... on ne peut pas debiter -10
+		  });
 	}
 
 }
