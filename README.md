@@ -19,47 +19,23 @@ Utilisez le bouton dowload accessible à partir de la page principale de ce proj
 
 ======== Build du projet =========
 
+
 Ce projet Java utilise Gradle, un outil qui permet de gérer les librairies telles que JUnit. Gradle va automatiquement télécharger les librairies utiles au projet. Attention cependant si l'accès à internet se fait via un proxy comme c'est le cas à l'IUT. Dans ce cas il faut indiquer à Gradle la configuration du proxy dans un fichier gradle.properties. D'où la présence de ce fichier dans le projet. Si vous accédez directement à Internet sans passer par un proxy (comme c'est le cas par exemple si vous utilisez le WiFi d'un téléphone portable) il faut supprimer le fichier gradle.properties du projet. 
 
-Pour builder le projet il faut utiliser la commande 
+Eclipse : Import -> Gradle ...
 
-./gradlew build			
+Intellij : Open
 
-sous Linux (attention ! parfois le fichier gradlew n'est pas exécutable. Dans ce cas, il faut exécuter la commande : chmod 777 gradlew)
-
-ou
-
-gradlew build			
-
-sous Windows. 
-
-Le premier lancement de cette commande prend du temps car un exécutable de Gradle est téléchargé.
-
-Cette commande commnence par compiler le code Java, lance automatiquement le programme de test. 
 
 ======== Consultation du rapport de test =========
 
-Le build du projet s'est terminé par le lancement automatique du programme de test JUnit. Le rapport HTML de test est accessible dans le dossier build/reports/tests/test. Il vous indique que les deux tests du programme de test ont réussi. Ainsi il vous suffira de refaire la commande gradle build pour recompiler votre projet et relancer à tout moment les tests.
+Click droit sur le fichier de test
 
-======== Edition du projet =========
+https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
 
-Vous pouvez utiliser n'importe quel éditeur de texte pour éditer les programmes (les erreurs de compilation apparaissent quand vous faites un build du projet.
 
-======== Edition du projet sous Eclipse (optionnel et nécessite parfois un peu de configuration) =========
+Et faire run as JUnit tests
 
-Avant d'éditer le projet sous Eclipse, il faut convertir le projet gradle en un projet eclipse via la commande
-
-./gradlew eclipse		
-
-sous Linux ou
-
-gradlew eclipse		
-
-sous Windows.
-
-Vous pouvez alors importer le projet sous Eclipse via le menu : File -> Import -> Existing project into workspage ...
-
-Attention cependant, Eclipse va sous servir uniquement à éditer les programmes, mais pas à exécuter les tests.
 
 ======== Codage =========
 
@@ -72,19 +48,21 @@ Remarque : si vous ne vous sentez pas  à l'aise avec les exceptions vous pouvez
 Compléter le programme de test https://github.com/charroux/debogage/blob/master/src/test/java/com/univ/Testing/TestingApplicationTests.java
 afin de tester la classe de la classe de la question précédente.
 
-Lancer les tests via gradle build et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs. Attention cependant ! si vous avez des erreurs de compilation, le build échouera. Un message d'erreur s'affichera. Vous devrez alors corriger le problème de compilation avec que le build réussisse.
+Lancer les tests et corriger la classe a tester jusqu'à ce qu'il n'y ait plus de bugs. Attention cependant ! si vous avez des erreurs de compilation, le test échouera. Un message d'erreur s'affichera. Vous devrez alors corriger le problème de compilation avant que le tets réussisse.
 
 ======== Couverture de code avec Jacoco =========
 
 Le projet est configuré pour effectuer des tests de couverture de code. 
 
-Pour lancer les tests de couverture utilisez la commande : ./gradlew test jacocoTestReport
-
-Le rapport de test HTML est dans le dossier build/jacocoHtml.
+Pour lancer les tests de couverture clicker droit et lancer Coverage as JUnit testacocoTestReport
 
 Jacoco vérifie la couverture de code C0 (instructions) et C1 (branches). Vérifier que votre code est couvert à 100%. Si ce n'est pas la cas ajoutez des tests à votre programme de test.
 
 ======== Analyse statique du code source Java avec findBugs ============
+
+
+A revoir ...
+
 
 findBugs est un outils qui permet de détecter des erreurs de codage via une analyse statique des programmes (voir le cours).
 
